@@ -23,31 +23,29 @@ The idea behind this project is, to give animal shelters a common plattform wher
 - [x] add middleware so all endpoints serve json
 - [x] setup connection to mongoDB
 - [x] setup basic models
-- [ ] setup routes
-    - [ ] Shelter
-        - [x] get all
-        - [ ] get specific by Id
-        - [ ] get specific by name
-        - [ ] add new
-        - [ ] (soft-) delete 
-        - [ ] update
-    - [ ] Users
-        - [ ] get all
-        - [ ] get specific by Id
-        - [ ] get specific by name
-        - [ ] add new
-        - [ ] (soft-) delete 
-        - [ ] update
-    - [ ] Pets
-        - [ ] get all
-        - [ ] get specific by Id
-        - [ ] get specific by name
-        - [ ] add new
-        - [ ] (soft-) delete
-        - [ ] update
-- [ ] redis caching
+- [x] Shelter
+    - [x] get all
+    - [x] get specific by Id
+    - [x] add new
+    - [x] (soft-) delete 
+    - [x] update
+- [ ] Restructure CRUD Operations for Shelter so it can be used for every other model aswell
+- [ ] Users
+    - [ ] get all
+    - [ ] get specific by Id
+    - [ ] add new
+    - [ ] (soft-) delete 
+    - [ ] update
+- [ ] Pets
+    - [ ] get all
+    - [ ] get specific by Id
+    - [ ] add new
+    - [ ] (soft-) delete
+    - [ ] update
+- [ ] Add Caching (Redis?)
 - [ ] automatic cache invalidation on entity change (PDP)
-[ ] automatic populating of elastic on CRUD operations - (basicly a new job that runs in the background)
+- [ ] automatic populating of elastic on CRUD operations
+    - like a job that runs in the background
 - [ ] Search / uncached Listingpages from Elastic
 - [ ] authorization middleware
     - only SuperUsers/Owner can delete Shelters

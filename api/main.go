@@ -13,10 +13,14 @@ import (
 func main() {
 	config.ReadInConfig()
 	database.SetupConnection(config.Cfg.Database.Connection)
-	r := mux.NewRouter()
-	routes.SetupMiddlewares(r)
-	routes.SetupRoutes(r)
+
+	router := mux.NewRouter()
+	apiV1Router := router.PathPrefix("/api/v1").Subrouter()
+
+	routes.SetupMiddlewares(apiV1Router)
+	routes.SetupRoutes(apiV1Router)
+
 	log.Println("Starting server at http://" + config.Cfg.Server.Host + ":" + config.Cfg.Server.Port)
-	http.ListenAndServe(":"+config.Cfg.Server.Port, r)
+	http.ListenAndServe(":"+config.Cfg.Server.Port, router)
 	database.CloseConnection()
 }
