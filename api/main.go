@@ -14,6 +14,7 @@ func main() {
 	config.ReadInConfig()
 	database.SetupConnection(config.Cfg.Database.Connection)
 	r := mux.NewRouter()
+	routes.SetupMiddlewares(r)
 	routes.SetupRoutes(r)
 	log.Println("Starting server at http://" + config.Cfg.Server.Host + ":" + config.Cfg.Server.Port)
 	http.ListenAndServe(":"+config.Cfg.Server.Port, r)

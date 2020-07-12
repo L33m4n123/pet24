@@ -12,7 +12,13 @@ import (
 func SetupRoutes(r *mux.Router) {
 	log.Println("Setting up routes")
 
+	r.HandleFunc("/api/v1/shelters", handler.ShelterHandler)
+}
+
+// SetupMiddlewares initiates all Middlewares for the router
+func SetupMiddlewares(r *mux.Router) {
+	log.Println("Setting up Middlewares")
+
 	r.Use(middlewares.JSONMw)
 	r.Use(middlewares.LoggingMw)
-	r.HandleFunc("/api/v1/shelters", handler.ShelterHandler)
 }
