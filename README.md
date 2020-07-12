@@ -16,6 +16,7 @@ The idea behind this project is, to give animal shelters a common plattform wher
 - [ ] split up all 3 in seperate repositories?
   - still debating about this myself
 - [ ] creating seperate docker containers for each service
+- [ ] Come up with a better name
 
 ## API
 - [x] setup basic Server
