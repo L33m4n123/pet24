@@ -3,7 +3,7 @@ package models
 import (
 	"context"
 
-	"github.com/l33m4n123/pet24/api/database"
+	"github.com/l33m4n123/pet24/api/v1/database"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/l33m4n123/pet24/api/models"
+	"github.com/l33m4n123/pet24/api/v1/models"
 )
 
 // ShelterHandler handler for the home route
